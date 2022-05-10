@@ -1,0 +1,14 @@
+.grid-element {
+  box-sizing: border-box;
+  background: transparent;
+  position: absolute;
+  z-index: 50;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+}
+
+.grid-element:hover {
+  border: 1px solid red;
+  background-color: rgba(255, 255, 255, 0.5);
+}

@@ -1,0 +1,264 @@
+@import "transition-style";
+
+.board {
+  display: flex;
+  width: auto;
+  flex-wrap: wrap;
+  border: 6px solid #d3a25f;
+  border-radius: 20px;
+  background-color: #fff7d5d1;
+  padding: 20px;
+  box-shadow: 5px 6px 4px 4px rgba(146, 93, 39, 0.5);
+  -webkit-box-shadow: 5px 6px 4px 4px rgba(146, 93, 39, 0.5);
+  -moz-box-shadow: 5px 6px 4px 4px rgba(146, 93, 39, 0.5);
+
+  margin: 40px 40px 80px 40px;
+  margin-top: 0;
+  flex-direction: row;
+  align-content: space-around;
+  justify-content: space-evenly;
+  align-items: baseline;
+  overflow-y: auto;
+
+  align-content: stretch;
+  justify-content: start;
+}
+
+/* Tamaño del scroll */
+.App::-webkit-scrollbar {
+  width: 8px;
+  background: #d3a25f;
+}
+
+/* Estilos barra (thumb) de scroll */
+.App::-webkit-scrollbar-thumb {
+  background: #81643b;
+  border-radius: 8px;
+}
+
+.App::-webkit-scrollbar-thumb:active {
+  background-color: red;
+}
+
+.App::-webkit-scrollbar-thumb:hover {
+  background: #81643b;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos track de scroll */
+.App::-webkit-scrollbar-track {
+  background: #d3a25f;
+  border-radius: 4px;
+}
+
+.App::-webkit-scrollbar-track:hover,
+.App::-webkit-scrollbar-track:active {
+  background: #d3a25f;
+}
+
+.score_ {
+  display: flex;
+  width: 300px;
+  border: 6px solid #af713a;
+  border-radius: 20px;
+  background-color: #d8953e;
+  padding: 20px;
+  box-shadow: 5px 6px 4px 4px rgba(146, 93, 39, 0.5);
+  -webkit-box-shadow: 5px 6px 4px 4px rgba(146, 93, 39, 0.5);
+  -moz-box-shadow: 5px 6px 4px 4px rgba(146, 93, 39, 0.5);
+  margin: 40px;
+  margin-top: 0;
+  font-family: "super-mario";
+  font-size: 24px;
+  font-weight: bold;
+  color: #fcf4d2;
+}
+
+.timer {
+  font-family: "super-mario";
+  background-color: transparent;
+  width: auto;
+  color: black;
+  margin: 20px 40px;
+  text-align: center;
+  display: flex;
+  font-size: 36px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.timer .title {
+  display: block;
+}
+
+.time .clock {
+  margin-right: 12px;
+  height: fit-content;
+}
+
+.timer .score {
+  display: flex;
+  align-items: flex-end;
+  align-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  line-height: 32px;
+  font-size: 52px;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+  background: hsla(38, 92%, 49%, 1);
+  background: linear-gradient(
+    90deg,
+    hsla(38, 92%, 49%, 1) 0%,
+    hsla(51, 100%, 48%, 1) 22%,
+    hsla(38, 92%, 49%, 1) 47%,
+    hsla(51, 100%, 48%, 1) 74%,
+    hsla(38, 92%, 49%, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(38, 92%, 49%, 1) 0%,
+    hsla(51, 100%, 48%, 1) 22%,
+    hsla(38, 92%, 49%, 1) 47%,
+    hsla(51, 100%, 48%, 1) 74%,
+    hsla(38, 92%, 49%, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(38, 92%, 49%, 1) 0%,
+    hsla(51, 100%, 48%, 1) 22%,
+    hsla(38, 92%, 49%, 1) 47%,
+    hsla(51, 100%, 48%, 1) 74%,
+    hsla(38, 92%, 49%, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.timer .score .x {
+  font-size: 36px;
+  font-weight: bold;
+  margin-left: -1px;
+  -webkit-text-stroke-width: 2px;
+}
+
+.timer .coin {
+  width: 38px;
+}
+
+.time .number {
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.timer .time {
+  font-size: 52px;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+  background: hsla(174, 6%, 65%, 1);
+  background: linear-gradient(
+    90deg,
+    hsla(174, 6%, 65%, 1) 0%,
+    hsla(70, 21%, 95%, 1) 22%,
+    hsla(174, 6%, 65%, 1) 47%,
+    hsla(70, 21%, 95%, 1) 74%,
+    hsla(174, 6%, 65%, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(174, 6%, 65%, 1) 0%,
+    hsla(70, 21%, 95%, 1) 22%,
+    hsla(174, 6%, 65%, 1) 47%,
+    hsla(70, 21%, 95%, 1) 74%,
+    hsla(174, 6%, 65%, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(174, 6%, 65%, 1) 0%,
+    hsla(70, 21%, 95%, 1) 22%,
+    hsla(174, 6%, 65%, 1) 47%,
+    hsla(70, 21%, 95%, 1) 74%,
+    hsla(174, 6%, 65%, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card:hover,
+.card:focus {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.background {
+  /* padding-top: 20px; */
+  background-color: black;
+  height: 100vh; /* calc(100vh - 10px); */
+  display: flex;
+  flex-direction: column;
+  /* /assets/images/bg1.jpg */
+  background-size: cover;
+  image-rendering: pixelated;
+  justify-content: space-between;
+  align-items: stretch;
+  opacity: 0;
+  background-image: url(./assets/images/world1.gif);
+  transition: 2s opacity;
+}
+
+.background.start {
+  opacity: 1;
+}
+
+.app {
+  background-color: black;
+}
+
+.characters {
+  background-image: url(./assets/images/mario-characters.jpg);
+  background-repeat: no-repeat;
+  border: 1px solid #9a652d;
+  border-radius: 8px;
+}
+
+.card {
+  width: 140px;
+  height: 198px;
+  margin: 10px;
+  border-radius: 15px;
+  border: 1px solid transparent;
+}
+
+@keyframes circle-out-hesitate {
+  0% {
+    clip-path: circle(125%);
+  }
+  40% {
+    clip-path: circle(40%);
+  }
+  100% {
+    clip-path: circle(0%);
+  }
+}
+
+[transition-style="out:circle:hesitate"] {
+  animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) circle-out-hesitate both;
+}
+
+@keyframes circle-in-center {
+  from {
+    clip-path: circle(0%);
+  }
+  to {
+    clip-path: circle(125%);
+  }
+}
+
+[transition-style="in:circle:center"] {
+  animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) circle-in-center both;
+}

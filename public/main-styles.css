@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "super-mario";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/SuperMario256.ttf);
+}
+
+@font-face {
+  font-family: "paperMario";
+  src: url(assets/fonts/paperMario.ttf);
+}

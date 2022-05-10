@@ -1,0 +1,208 @@
+.world-background {
+  /* width: 100%;
+  height: 100vh; */
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  display: inline-block;
+}
+
+.map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.scale {
+  background-image: url(../assets/images/select-world.png);
+  background-position: "0px 550px";
+}
+
+.dot {
+  position: absolute;
+  top: 920px;
+  left: 150px;
+  z-index: 100;
+}
+
+.map {
+  width: 480px;
+  height: 152px;
+  background-image: url(../assets/images/pipeland-map.gif);
+  background-position: -3px -1px;
+  animation: animateMap 1s steps(4) infinite;
+}
+@keyframes animateMap {
+  from {
+    background-position-y: 0px;
+  }
+  to {
+    background-position-y: -621px;
+  }
+}
+
+.map1 {
+  width: 100%;
+  background-image: url(../assets/images/map-1.gif);
+  image-rendering: pixelated;
+}
+
+/*
+
+.blocked-level {
+  width: 64px;
+  height: 64px;
+  image-rendering: pixelated;
+  background-image: url(/assets/images/blocked-level.png);
+  background-position: calc(64px * 10) 0%;
+  background-size: calc(64px * 10);
+  animation: animate-blocked-level 1s steps(3) infinite;
+}
+*/
+
+.faces-in-map {
+  background-image: url(../assets/images/map-faces.png);
+  image-rendering: pixelated;
+  display: inline-block;
+  position: absolute;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+  z-index: 200;
+}
+
+.map-tiles {
+  image-rendering: pixelated;
+  background-image: url(../assets/images/map-tiles.png);
+  position: absolute;
+  z-index: 100;
+}
+
+.blocked-level {
+  image-rendering: pixelated;
+  background-image: url(../assets/images/blocked-level.png);
+  animation: animate-blocked-level 1s steps(3) infinite;
+  position: absolute;
+  z-index: 100;
+}
+@keyframes animate-blocked-level {
+  from {
+    background-position-y: 0%;
+  }
+  to {
+    background-position-y: 300%;
+  }
+}
+
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 744px 744px;
+  }
+}
+
+@keyframes bg-scrolling {
+  0% {
+    background-position: 744px 744px;
+  }
+}
+
+.select-screen {
+  padding: 20px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+.select-screen::after {
+  width: 100%;
+  height: 100vh;
+  content: "";
+
+  transition: width 0.5s ease, height 0.5s ease;
+}
+
+.select-screen.animated::after {
+  width: 0;
+  height: 0;
+  content: "";
+  border-radius: 0%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 2000px black;
+}
+.border {
+  box-sizing: border-box;
+  border: 5px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 5px 6px 4px 4px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 5px 6px 4px 4px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 5px 6px 4px 4px rgba(0, 0, 8, 0.5);
+}
+
+.world-backgroud {
+  position: relative;
+  background-color: #00ff8e;
+}
+
+.title {
+  font-size: 5rem;
+  font-weight: 100;
+  font-style: normal;
+  display: block;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+  background: hsla(38, 92%, 49%, 1);
+  background: linear-gradient(
+    90deg,
+    hsla(38, 92%, 49%, 1) 0%,
+    hsla(51, 100%, 48%, 1) 22%,
+    hsla(38, 92%, 49%, 1) 47%,
+    hsla(51, 100%, 48%, 1) 74%,
+    hsla(38, 92%, 49%, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(38, 92%, 49%, 1) 0%,
+    hsla(51, 100%, 48%, 1) 22%,
+    hsla(38, 92%, 49%, 1) 47%,
+    hsla(51, 100%, 48%, 1) 74%,
+    hsla(38, 92%, 49%, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(38, 92%, 49%, 1) 0%,
+    hsla(51, 100%, 48%, 1) 22%,
+    hsla(38, 92%, 49%, 1) 47%,
+    hsla(51, 100%, 48%, 1) 74%,
+    hsla(38, 92%, 49%, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.world-selection {
+  font-size: 28px;
+}
+
+/* Main styles */
+body {
+  margin-top: 5.5rem;
+  color: #999;
+  font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  font-family: "super-mario" !important;
+  text-align: center;
+  /* img size is 50x50 */
+  background: url(../assets/images/bg-pattern2.png) repeat 0 0;
+  animation: bg-scrolling-reverse 15s infinite;
+  /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}

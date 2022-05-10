@@ -1,0 +1,38 @@
+.dialog {
+  width: 300px;
+  height: 200px;
+  background-color: #feffdc;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 4px solid white;
+  -webkit-box-shadow: 4px 4px 8px -2px rgba(0, 0, 0, 0.66);
+  box-shadow: 4px 4px 8px -2px rgba(0, 0, 0, 0.66);
+}
+
+.dialog::before {
+  content: "";
+  width: 75px;
+  height: 100%;
+  background-image: url(/assets/images/back-left.png);
+  background-repeat: repeat-y;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+.dialog::after {
+  content: "";
+  width: 75px;
+  height: 100%;
+  background-image: url(/assets/images/back-right.png);
+  background-repeat: repeat-y;
+  right: 0;
+  top: 0;
+  position: absolute;
+}

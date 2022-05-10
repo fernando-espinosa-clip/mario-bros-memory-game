@@ -1,0 +1,60 @@
+.controls {
+  padding: 24px 18px;
+  margin: 24px 0;
+  border-radius: 12px;
+  display: flex;
+  align-items: stretch;
+  position: relative;
+  background-image: url(../assets/images/back-left.png),
+    url(../assets/images/back-right.png);
+  background-position: left top, right top;
+  background-repeat: repeat-y, repeat-y;
+  background-color: #feffdd;
+  border: 5px solid #8e4a00;
+  box-shadow: 5px 6px 4px 4px rgb(0 0 0 / 30%);
+  -webkit-box-shadow: 5px 6px 4px 4px rgb(0 0 0 / 30%);
+  -moz-box-shadow: 5px 6px 4px 4px rgba(0, 0, 8, 0.5);
+  width: 300px;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.controls label {
+  font-family: "paperMario";
+  font-size: 14px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #424242;
+  color: white;
+}
+
+.buttons {
+  color: #424242;
+}
+
+.buttons button.space {
+  width: 200px;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: "paperMario";
+  color: black;
+}
+
+.buttons button {
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  line-height: 24px;
+  margin: 2px;
+  border-radius: 12px;
+  border: 4px solid #424242;
+  cursor: pointer;
+}
+
+.buttons button:hover,
+.buttons button:focus {
+  border: 4px solid #7d7d7d;
+  color: #7d7d7d;
+}
